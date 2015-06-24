@@ -15,7 +15,7 @@ function isArray ( thing ) {
 }
 
 function visit ( node, parent, enter, leave ) {
-	if ( !node ) return;
+	if ( !node || !node.type ) return;
 
 	if ( enter ) {
 		context.shouldSkip = false;
